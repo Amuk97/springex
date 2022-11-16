@@ -74,7 +74,7 @@
                         <script>
 
                             const serverValidResult = {}
-
+                            //화면에서 에러를 받는?
                             <c:forEach items="${errors}" var="error">
 
                             serverValidResult['${error.getField()}'] = '${error.defaultMessage}'

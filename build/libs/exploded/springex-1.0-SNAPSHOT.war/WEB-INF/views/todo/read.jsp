@@ -81,28 +81,42 @@
 
                         <div class="my-4">
                             <div class="float-end">
+<%--                                <button type="button" class="btn btn-danger">Remove</button>--%>
                                 <button type="button" class="btn btn-primary">Modify</button>
                                 <button type="button" class="btn btn-secondary">List</button>
                             </div>
                         </div>
 
                         <script>
-                            /*document.querySelector(".btn-primary").addEventListener("click", function(e){
-                                self.location = "/todo/modify?tno="+${dto.tno}
-                            },false)*/
+                            //const formObj=document.querySelector("form")
 
+                            // document.querySelector(".btn-danger").addEventListener("click",function(e)
+                            // {
+                            //     e.preventDefault()
+                            //     e.stopPropagation()
+                            //
+                            //     formObj.action="/todo/remove"
+                            //     formObj.method="post"
+                            //
+                            //     formObj.submit()
+                            // },false);
 
                             document.querySelector(".btn-primary").addEventListener("click", function(e){
-
-                                self.location = `/todo/modify?tno=${dto.tno}&${pageRequestDTO.link}`
-
+                                self.location = "/todo/modify?tno="+${dto.tno}
                             },false)
 
 
+                            <%--document.querySelector(".btn-primary").addEventListener("click", function(e){--%>
 
-                            // document.querySelector(".btn-secondary").addEventListener("click", function(e){
-                            //     self.location = "/todo/list";
-                            // },false)
+                            <%--    self.location = `/todo/modify?tno=${dto.tno}&${pageRequestDTO.link}`--%>
+
+                            <%--},false)--%>
+
+
+
+                            document.querySelector(".btn-secondary").addEventListener("click", function(e){
+                                self.location = "/todo/list";
+                            },false)
 
                             //목록 페이지로 이동하는 이벤트 처리
                             document.querySelector(".btn-secondary").addEventListener("click", function(e){

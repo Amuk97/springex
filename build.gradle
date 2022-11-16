@@ -34,13 +34,16 @@ dependencies {
     implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.0.4'
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
 
+
     // https://mvnrepository.com/artifact/org.springframework/spring-core
     implementation group: 'org.springframework', name: 'spring-core', version: '5.3.19'
     implementation group: 'org.springframework', name: 'spring-context', version: '5.3.19'
-    implementation group: 'org.springframework', name: 'spring-test', version: '5.3.19'
+    implementation group: 'org.springframework', name: 'spring-test', version: '5.3.19'//스프링 컨테이너에 등록된 빈들을 테스트 하기위해서
     implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.19'
     implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.19'
     implementation group: 'org.springframework', name: 'spring-tx', version: '5.3.19'
+
+
     //lombok library
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
@@ -61,15 +64,16 @@ dependencies {
 
     implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.17.2'
 
-    //mybatis
+
+    // mybatis
     implementation 'org.mybatis:mybatis:3.5.9'
     implementation 'org.mybatis:mybatis-spring:2.0.7'
 
     //jstl
     implementation group: 'jstl', name: 'jstl', version: '1.2'
 
-    //DTO검증 Validate관련 라이브러리
-    implementation group: 'org.hibernate',name: 'hibernate-validator',version: '6.2.1.Final'
+    //dto의 검증 validate 관련 라이브러리
+    implementation group: 'org.hibernate',name:'hibernate-validator',version: '6.2.1.Final'
 }
 
 test {

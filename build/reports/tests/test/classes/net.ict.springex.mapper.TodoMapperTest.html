@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.092s</div>
+<div class="counter">0.111s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">testSelectAll()</td>
-<td class="success">0.092s</td>
+<td class="success">testSelectSearch()</td>
+<td class="success">0.111s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,14 +87,20 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>11:46:49  INFO [org.springframework.test.context.support.DefaultTestContextBootstrapper] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-11:46:49  INFO [org.springframework.test.context.support.DefaultTestContextBootstrapper] Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1f12e153, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@389562d6, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5a101b1c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2160e52a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@29f0802c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3a60c416, org.springframework.test.context.event.EventPublishingTestExecutionListener@60f2e0bd]
-11:46:50  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-11:46:50  INFO [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@476fe690
-11:46:50  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-11:46:50  INFO [net.ict.springex.mapper.TodoMapperTest] TodoVO(tno=3, title=한글 테스트 타이틀, dueDate=2022-12-10, finished=false, writer=한글 작성자 테스트)
-11:46:50  INFO [net.ict.springex.mapper.TodoMapperTest] TodoVO(tno=2, title=SpringTest, dueDate=2022-11-14, finished=false, writer=ict05)
-11:46:50  INFO [net.ict.springex.mapper.TodoMapperTest] TodoVO(tno=1, title=test title, dueDate=2022-11-14, finished=false, writer=test writer)
+<pre>04:22:07  INFO [org.springframework.test.context.support.DefaultTestContextBootstrapper] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+04:22:07  INFO [org.springframework.test.context.support.DefaultTestContextBootstrapper] Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@60f2e0bd, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@469d003c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6b410923, org.springframework.test.context.support.DirtiesContextTestExecutionListener@57bd2029, org.springframework.test.context.transaction.TransactionalTestExecutionListener@203dd56b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@e8fadb0, org.springframework.test.context.event.EventPublishingTestExecutionListener@6d64b553]
+04:22:08  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+04:22:08  INFO [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2f5ac102
+04:22:08  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+04:22:08 DEBUG [net.ict.springex.mapper.TodoMapper.selectList] ==&gt;  Preparing: select * from tbl_todo WHERE ( title like concat('%',?,'%') OR writer like concat('s%',?,'%') ) and finished = 1 and dueDate between ? and ? order by tno desc limit ?,?
+04:22:08 DEBUG [net.ict.springex.mapper.TodoMapper.selectList] ==&gt; Parameters: 스프링(String), 스프링(String), 2022-11-10(LocalDate), 2022-11-14(LocalDate), 0(Integer), 10(Integer)
+04:22:08 DEBUG [net.ict.springex.mapper.TodoMapper.selectList] &lt;==      Total: 0
+04:22:08 DEBUG [net.ict.springex.mapper.TodoMapper.getCount] ==&gt;  Preparing: select count(tno) from tbl_todo
+04:22:08 DEBUG [net.ict.springex.mapper.TodoMapper.getCount] ==&gt; Parameters: 
+04:22:08 TRACE [net.ict.springex.mapper.TodoMapper.getCount] &lt;==    Columns: count(tno)
+04:22:08 TRACE [net.ict.springex.mapper.TodoMapper.getCount] &lt;==        Row: 1536
+04:22:08 DEBUG [net.ict.springex.mapper.TodoMapper.getCount] &lt;==      Total: 1
+04:22:08  INFO [net.ict.springex.mapper.TodoMapperTest] 1536
 </pre>
 </span>
 </div>
@@ -106,7 +112,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 2022. 11. 15. 오전 11:46:51</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 2022. 11. 16. 오후 4:22:08</p>
 </div>
 </div>
 </body>
